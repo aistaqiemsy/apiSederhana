@@ -1,4 +1,4 @@
-<a href="/api/post">Kembali</a>
+<a href="/api/post">Beranda</a>
 <hr>
 <table border="1">
     <tr>
@@ -10,7 +10,11 @@
         <td> {{ $dataSiswa->nama }}</td>
         <td>{{ $dataSiswa->alamat }}</td>
         <td>
-            <a href="/post/edit/{{ $dataSiswa->id }}">Perbarui</a> | 
+        <form action="/post/edit/{{ $dataSiswa->id }}" method="get">
+                @csrf
+                <button type="submit">Perbarui</button>
+             </form>
+            <!-- <a href="/post/edit/{{ $dataSiswa->id }}">Perbarui</a> |  -->
              
              <form action="/api/post/{{ $dataSiswa->id }}" method="post">
                 @csrf

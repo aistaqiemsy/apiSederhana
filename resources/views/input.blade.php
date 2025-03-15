@@ -6,6 +6,8 @@
     <title>Input Data Baru</title>
 </head>
 <body>
+<a href="/api/post">Beranda</a>
+<hr>
     <form action="/api/post" method="post">
         <table>
             <tr>
