@@ -83,4 +83,20 @@ class PostController extends Controller
             return redirect('/api/post');
         }
     }
+
+    public function tampilEdit($id) {
+        $post = Post::find($id);
+        return view('tampilEdit', [
+            'dataEdit' => $post,
+        ]);
+    }
+
+    public function perbaruiData(Request $request, $id) {
+        $post = Post::where('id', $id)->update([
+            'nama' => $request->editNama,
+            'alamat' => $request->editAlamat
+        ]);
+
+        return redirect('/api/post')->with('success', 'Berhasil!');
+    }
 }

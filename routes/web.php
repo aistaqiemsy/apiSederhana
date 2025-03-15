@@ -12,3 +12,7 @@ Route::get('/input/baru', function () {
 });
 
 Route::get('/pengguna/login', [PostController::class, 'login']);
+
+Route::get('/post/edit/{id}', [PostController::class, 'tampilEdit']);
+
+Route::get('/post/perbarui/{id}', [PostController::class, 'perbaruiData']);

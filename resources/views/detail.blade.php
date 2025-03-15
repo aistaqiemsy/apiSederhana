@@ -10,8 +10,7 @@
         <td> {{ $dataSiswa->nama }}</td>
         <td>{{ $dataSiswa->alamat }}</td>
         <td>
-            <a href="/api/post/{{ $dataSiswa->id }}">Perbarui</a> | 
-            <!-- <a href="/api/post/{{ $dataSiswa->id }}">Hapus</a> -->
+            <a href="/post/edit/{{ $dataSiswa->id }}">Perbarui</a> | 
              
              <form action="/api/post/{{ $dataSiswa->id }}" method="post">
                 @csrf
