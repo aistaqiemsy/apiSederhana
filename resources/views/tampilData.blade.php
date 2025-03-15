@@ -1,3 +1,6 @@
+<a href="/input/baru">Input Data Baru</a>
+<hr>
+
 <table>
     <tr>
         <td>Nama</td>
